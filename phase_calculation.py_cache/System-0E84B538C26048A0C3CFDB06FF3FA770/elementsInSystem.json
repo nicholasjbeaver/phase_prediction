@@ -1,0 +1,11 @@
+[
+  {
+    "elementName": "HF",
+    "isInterstitial": false,
+    "molarMass": 178.49,
+    "stableElementReference": "HCP_A3",
+    "enthalpy": 5845.0,
+    "entropyDiff0To298K": 43.56,
+    "isValid": true
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "elements": [
+      "Hf"
+    ],
+    "speciesToCreateAndSelect": [],
+    "speciesToAdd": [],
+    "speciesToRemove": [],
+    "phasesToAdd": [],
+    "addedCompositionSets": [],
+    "phasesToRemove": [],
+    "constituentsToRejectFromSublattice": [],
+    "constituentsToSelectFromSublattice": [],
+    "name": "TCHEA4",
+    "deSelectDefaultPhases": false,
+    "lastChanged": 0,
+    "isUserDatabase": false,
+    "databaseLoadCommand": "TCHEA4"
+  }
+]

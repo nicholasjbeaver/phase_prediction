@@ -1,7 +1,7 @@
 import os
 import itertools
 import argparse
-
+import phase_calculation
 
 def verify_elements(elements):
     # check each element and make sure it is in the supported list
@@ -65,7 +65,7 @@ def read_status_file(status_file):
 def perform_thermo_calculation(output_filename, elements, output_dir = './data' ):
     # perform the thermo calculation
     # return True if successful, False otherwise
-
+    phase_calculation.calculate_phases
     # append the output directory to the filename
     output_filename = os.path.join(output_dir, output_filename)
 

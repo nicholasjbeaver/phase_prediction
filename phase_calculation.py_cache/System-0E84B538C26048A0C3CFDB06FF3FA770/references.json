@@ -1,0 +1,15 @@
+{
+  "TCHEA4": [
+    "\u0027N. Dupin, fixing VA:VA\u003d30*T\u0027",
+    "\u0027Default volume data, V0DFLT\u003d7.0E-6; VADFLT\u003d10.0E-6*THREE*DELTAT\u0027",
+    "\u0027New sigma using combined CEF\u0027",
+    "\u0027Volume data for Hf, Xiaogang Lu 2008\u0027",
+    "\u0027G(LAVES,AA)\u003d3*G(SER,AA)+15000\u0027",
+    "\u0027H. Mao, Thermo-Calc Software AB, Stockholm, 2019; Molar volumes\u0027",
+    "\u0027J. Bratberg, Thermocalc Software AB, Stockholm, Sweden, 2010\u0027",
+    "\u0027P. Zhou et al., J. Phase Equilib. Diffus, 33 (2012) 20-28 Hf-Mn\u0027",
+    "\u0027L. Kjellqvist, Thermo-Calc Software AB, Stockholm, 2010; Unassessed parameter, linear combination of unary volume data\u0027",
+    "\u0027H. Mao, Thermo-Calc Software AB, Sweden, 2018; unpublished assessment of Hf-N. \u0027",
+    "\u0027T Ishikawa, Meas Sci Technol 23 (2012) 025305; Ti, Ni, Zr, Nb, Ru, Rh, Hf, Ir, Pt, Tb\u0027"
+  ]
+}
