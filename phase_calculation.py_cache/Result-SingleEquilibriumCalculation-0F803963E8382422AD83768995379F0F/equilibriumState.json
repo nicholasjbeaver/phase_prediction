@@ -1,0 +1,153 @@
+{
+  "conditions": [
+    "P\u003d1E5",
+    "N\u003d1",
+    "T\u003d100"
+  ],
+  "potentials": [
+    100.0,
+    100000.0,
+    0.0,
+    -7.982967759774727
+  ],
+  "phases": [
+    {
+      "index": 1,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -31.639804029341473,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0
+      ]
+    },
+    {
+      "index": 3,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -13.926297608112137,
+      "stability": 0.9999999996011744,
+      "siteFractions": [
+        0.999999999999,
+        1.0E-12,
+        0.999999999999,
+        1.0E-12,
+        1.0
+      ]
+    },
+    {
+      "index": 3,
+      "compositionSet": 2,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -41.80225320404011,
+      "stability": 0.9999994170598889,
+      "siteFractions": [
+        0.6896953679224681,
+        0.31030463207753184,
+        0.9994702302221071,
+        5.297697778929016E-4,
+        1.0
+      ]
+    },
+    {
+      "index": 4,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -18.040750447109932,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 5,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -18.040750447109932,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 6,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -18.040750447109932,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 7,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -9.057899984484955,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 9,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -11.762569291515671,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 10,
+      "compositionSet": 1,
+      "status": 1,
+      "amount": 1.0,
+      "drivingForce": 0.0,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 11,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -6.089307129343762,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "index": 12,
+      "compositionSet": 1,
+      "status": 0,
+      "amount": 0.0,
+      "drivingForce": -5.881284645757836,
+      "stability": 1.0,
+      "siteFractions": [
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}
