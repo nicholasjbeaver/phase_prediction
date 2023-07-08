@@ -1,3 +1,4 @@
+
 class Results():
 
     def __init__(self, x: [], y: [], label: str):
@@ -18,6 +19,8 @@ class Results():
 def x_table(results_dict):
     x_table = {}
     all_x_values = set(x for value in results_dict.values() for x in value.get_x())
+
+    all_x_values = {x for x in all_x_values if isinstance(x, (int, float))}
 
     for x in all_x_values:
         x_table[x] = {key: None for key in results_dict.keys()}
