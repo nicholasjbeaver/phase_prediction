@@ -3,6 +3,7 @@ import concurrent.futures
 import SURP
 import argparse
 
+DEBUG_MODE = False
 
 def run_simulation(elements_string):
     if DEBUG_MODE:
