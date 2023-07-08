@@ -17,9 +17,10 @@ def calculate_phases(elements):
 		prop_diag = prop_diag_calc.with_axis(axis)
 
 		# set conditions
+		comp = round(1/len(elements),3)
 		if len(elements) > 1:
 			for element in elements[0:-1]:
-				prop_diag.set_condition(ThermodynamicQuantity.mole_fraction_of_a_component(element), 1/len(elements))		 
+				prop_diag.set_condition(ThermodynamicQuantity.mole_fraction_of_a_component(element), comp)		 
 
 		# calculate
 		calculation = prop_diag.calculate()
