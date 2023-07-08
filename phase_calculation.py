@@ -1,7 +1,4 @@
 from tc_python import *
-import os
-import itertools
-import numpy as np
 
 
 def calculate_phases(elements):

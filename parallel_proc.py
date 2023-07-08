@@ -1,6 +1,6 @@
 import subprocess
 import concurrent.futures
-# import SURP
+import SURP
 
 
 def run_simulation(elements_string):
