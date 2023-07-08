@@ -2,6 +2,10 @@ import os
 import itertools
 import argparse
 import phase_calculation as pc
+import dummy_results
+
+
+DEBUG_MODE = False
 
 def verify_elements(elements):
     # check each element and make sure it is in the supported list
@@ -73,7 +77,6 @@ def perform_thermo_calculation(output_filename, elements, output_dir = './data' 
     table = pc.x_table(result)
     formatted = pc.format_table(table, result.keys())
     pc.output_txt(formatted, output_filename)
-    # write the header, with Temp, FCC, BCC, HCP, Liquid separated by tabs
     return True
 
 
@@ -110,6 +113,9 @@ if __name__ == '__main__':
     parser.add_argument("-e", "--elements", help="String argument that contains elements separated by _", required=True)
     # Add an optional parameter for an output file
     parser.add_argument("-o", "--output", help="Output file name for status list, optional...will construct name from elements", required=False)
+    # Add a debug flag
+    parser.add_argument("-d", "--debug", help="Debug flag", action="store_true", required=False)
+
     # Parse the arguments, unknown arguments will be ignored...used because running from batch file
     args, unknown = parser.parse_known_args()
 

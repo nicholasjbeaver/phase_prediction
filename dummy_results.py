@@ -49,14 +49,23 @@ def format_table(x_table, result_dict_keys):
     return table
 
 
-if __name__ == "__main__":
+def output_txt(table, filename):
+    with open(filename, 'w') as f:
+        f.write(table)
+
+
+def create_dummy_results(elements):
     fcc = Results([100, 110, 120], [1, 1, 1], "FCC")
     bcc = Results([130, 140, 150], [1, 1, 1], "BCC")
 
     calc_results = {"FCC": fcc, "BCC": bcc}
+    return calc_results
 
+
+if __name__ == "__main__":
+
+    calc_results = create_dummy_results()
     x_table_result = x_table(calc_results)
 
     print(x_table_result)
-
     print(format_table(x_table_result, calc_results.keys()))

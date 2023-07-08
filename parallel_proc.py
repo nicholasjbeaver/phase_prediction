@@ -1,11 +1,11 @@
 import subprocess
 import concurrent.futures
+import SURP
 
-from SURP import *
 
 
 def run_simulation(elements_string):
-    status = subprocess.run(['python.bat', 'SURP.py', f'-e "{elements_string}"'])
+    status = subprocess.run(['python.bat', 'dummy_results.py', f'-e "{elements_string}"'])
 
     if status.returncode != 0:
         print(f'Error running simulation for {elements_string}')
@@ -20,8 +20,17 @@ def run_simulation_from_file(filename):
         for line in f.readlines():
             element_strings.append(line.strip())
 
-    # verify elements in element_strings and remove those that are not supported
-    element_strings = [element_string for element_string in element_strings if SURP.verify_elements(extract_elements_from_string(element_string))]
+    valid_element_strings = []
+    # verify elements in element_strings and remove those that are not supported and log errors for the ones that are not supported
+    for element_string in element_strings:
+        elements = SURP.extract_elements_from_string(element_string)
+        if not SURP.verify_elements(elements):
+            print(f'Unsupported elements found in {element_string}')
+        else:
+            valid_element_strings.append(element_string)
+
+    element_strings = valid_element_strings
+
 
     # Use ThreadPoolExecutor to run simulations concurrently
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
