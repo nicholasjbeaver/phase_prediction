@@ -1,3 +1,5 @@
+import argparse
+import time
 
 class Results():
 
@@ -64,8 +66,31 @@ def create_dummy_results(elements):
 
 if __name__ == "__main__":
 
-    calc_results = create_dummy_results()
+   # Initialize the parser for input parameters to the this python file
+    parser = argparse.ArgumentParser(description="Takes a list of elements and performs all phase diagrams of combinations.")
+
+    # Add an argument to the parser
+    parser.add_argument("-e", "--elements", help="String argument that contains elements separated by _", required=False, default="Al_Cu")
+    # Add an optional parameter for an output file
+    parser.add_argument("-o", "--output", help="Output file name for status list, optional...will construct name from elements", required=False)
+    # Add a debug flag
+    parser.add_argument("-d", "--debug", help="Debug flag", action="store_true", required=False)
+
+    # Parse the arguments, unknown arguments will be ignored...used because running from batch file
+    args, unknown = parser.parse_known_args()
+
+    calc_results = create_dummy_results(args.elements)
     x_table_result = x_table(calc_results)
 
     print(x_table_result)
     print(format_table(x_table_result, calc_results.keys()))
+
+    if args.debug:
+        # waste some time
+        print(f'Simulating doing stuff with these elements: {args.elements}')
+        # sleep for 10 seconds
+        time.sleep(10)
+        print("Done simulating...")
+
+    exit(0)
+

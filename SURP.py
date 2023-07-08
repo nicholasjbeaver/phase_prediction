@@ -2,7 +2,7 @@ import os
 import itertools
 import argparse
 import phase_calculation as pc
-import dummy_results
+
 
 
 DEBUG_MODE = False
@@ -65,6 +65,7 @@ def read_status_file(status_file):
             list_of_files.append((filename, status))
 
     return list_of_files
+
 
 def perform_thermo_calculation(output_filename, elements, output_dir = './data' ):
     # perform the thermo calculation
