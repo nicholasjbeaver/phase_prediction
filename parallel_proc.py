@@ -4,7 +4,7 @@ import concurrent.futures
 
 
 def run_simulation(elements_string):
-    status = subprocess.run(['python.bat', 'dummy_results.py', f'-e "{elements_string}" -d '])
+    status = subprocess.run(['python.exe', 'dummy_results.py', f'-e "{elements_string}"', '-d'])
 
     if status.returncode != 0:
         print(f'Error running simulation for {elements_string}')
@@ -18,6 +18,9 @@ def run_simulation_from_file(filename):
     with open(filename, 'r') as f:
         for line in f.readlines():
             element_strings.append(line.strip())
+
+
+    print(f'Running simulations for {len(element_strings)} elements')
     '''
     valid_element_strings = []
     # verify elements in element_strings and remove those that are not supported and log errors for the ones that are not supported
