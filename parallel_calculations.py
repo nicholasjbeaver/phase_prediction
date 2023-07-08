@@ -71,4 +71,5 @@ if __name__ == "__main__":
         DEBUG_MODE = True
         print('Debug mode enabled')
 
+    print(f'Running simulations from {args.input}')
     run_simulation_from_file(args.input)
