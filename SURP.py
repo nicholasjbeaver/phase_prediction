@@ -1,7 +1,7 @@
 import os
 import itertools
 import argparse
-import phase_calculation
+import phase_calculation as pc
 
 def verify_elements(elements):
     # check each element and make sure it is in the supported list
@@ -65,16 +65,15 @@ def read_status_file(status_file):
 def perform_thermo_calculation(output_filename, elements, output_dir = './data' ):
     # perform the thermo calculation
     # return True if successful, False otherwise
-    phase_calculation.calculate_phases
     # append the output directory to the filename
     output_filename = os.path.join(output_dir, output_filename)
 
+    # do phase calculation
+    result = pc.calculate_phases(elements)
+    table = pc.x_table(result)
+    formatted = pc.format_table(table, result.keys())
+    pc.output_txt(formatted, output_filename)
     # write the header, with Temp, FCC, BCC, HCP, Liquid separated by tabs
-    with open(output_filename, 'w') as f:
-        f.write('Temp \t FCC \t BCC \t HCP \t Liquid \n')
-        for temp in range(1000, 1100, 10):
-            f.write(f'{temp} \t1.0\t0.0\t0.0\t0.0\n')
-
     return True
 
 
